@@ -1,4 +1,4 @@
-# qdmap
+# qdmap 
 
 
 [![image](https://img.shields.io/pypi/v/qdmap.svg)](https://pypi.python.org/pypi/qdmap)
@@ -17,6 +17,7 @@
     -   TODO Determine database type to use as a basis (PostGIS, GeoPackage, shapefiles?)
     -   TODO Create UI for plugin
     -   TODO Write spatial analysis (GeoPandas)
+-   DONE get website working
 
 ## Credits
 
