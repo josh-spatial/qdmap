@@ -8,13 +8,13 @@
 
 
 -   Free software: MIT license
--   Documentation: [GitHub](https://josh-spatial.github.io/qdmap)
+-   Documentation: https://josh-spatial.github.io/qdmap
     
 
 ## Features
 
 -   TODO Create QGIS Plugin
-    -   TODO Determine database type (PostGIS, GeoPackage, shapefiles?)
+    -   TODO Determine database type to use as a basis (PostGIS, GeoPackage, shapefiles?)
     -   TODO Create UI for plugin
     -   TODO Write spatial analysis (GeoPandas)
 
