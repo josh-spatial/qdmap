@@ -8,7 +8,7 @@
 
 
 -   Free software: MIT license
--   Documentation: https://josh-spatial.github.io/qdmap
+-   Documentation: [GitHub](https://josh-spatial.github.io/qdmap)
     
 
 ## Features
