@@ -19,7 +19,7 @@ theme:
 
 plugins:
     - search
-    - mkdocstrings
+#    - mkdocstrings
     - git-revision-date
     - mkdocs-jupyter:
           include_source: True
@@ -48,5 +48,5 @@ nav:
     - FAQ: faq.md
     - Changelog: changelog.md
     - Report Issues: https://github.com/josh-spatial/qdmap/issues
-#    - API Reference:
-#          - qdmap module: qdmap.md
+    - API Reference:
+          - qdmap module: qdmap.md
