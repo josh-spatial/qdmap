@@ -1,15 +1,11 @@
 # qdmap
 
-
 [![image](https://img.shields.io/pypi/v/qdmap.svg)](https://pypi.python.org/pypi/qdmap)
 [![image](https://github.com/josh-spatial/qdmap/workflows/build/badge.svg)](https://github.com/josh-spatial/qdmap/actions?query=workflow%3Abuild)
 
 **A python package for explosives safety quantity-distance spatial analysis.**
 
-
 -   Free software: MIT license
--   Documentation: https://josh-spatial.github.io/qdmap
-    
 
 ## Features
 
