@@ -13,8 +13,8 @@
 
 ## Features
 
-- IN-PROGRESS Create a basic quantity-distance calculator 
-    - [x] First in [jupyter notebook](https://colab.research.google.com/github/josh-spatial/qdmap/blob/main/qd_function.ipynb)
+- **IN-PROGRESS** Create a basic quantity-distance calculator 
+    - [x] *jupyter notebook*
 - TODO Create QGIS Plugin
     - TODO Determine database type to use as a basis (PostGIS, GeoPackage, shapefiles?)
     - TODO Create UI for plugin
