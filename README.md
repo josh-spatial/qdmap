@@ -13,11 +13,12 @@
 
 ## Features
 
--   TODO Create QGIS Plugin
-    -   TODO Determine database type to use as a basis (PostGIS, GeoPackage, shapefiles?)
-    -   TODO Create UI for plugin
-    -   TODO Write spatial analysis (GeoPandas)
--   DONE get website working
+- IN-PROGRESS Create a basic quantity-distance calculator 
+    - [x] First in jupyter notebook
+- TODO Create QGIS Plugin
+    - TODO Determine database type to use as a basis (PostGIS, GeoPackage, shapefiles?)
+    - TODO Create UI for plugin
+    - TODO Write spatial analysis (GeoPandas)
 
 ## Credits
 
