@@ -1,5 +1,6 @@
 """This module contains the basic QD calculation functions."""
 
+
 # Define blast distance (BD) functions.
 def bd1(q):
     """Returns BD1 blast distance from a given
