@@ -50,7 +50,7 @@ class PES(Site):
 
     def qd_info(self):
         """Return formatted info about the QDs."""
-        qd_info = f"QD Info:\nHD 1.1 QDs:\n\tBD1: \t{self.bd1_1_1:.1f} m"
+        qd_info = f"===QD Info===\n\t===HD 1.1 QDs===\n\tBD1: \t{self.bd1_1_1:.1f} m"
         return qd_info
 
 

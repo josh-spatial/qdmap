@@ -1,11 +1,11 @@
 """Main module."""
 
-
 from qdsites import PES
 
 
-# Test the code.
-# ====================
+# TODO write a while loop for input
+# TODO add facilities to a list (?)
+
 facility_number = input('Enter the facility number: ')
 type_code = input("Enter the facility's type code: ")
 s1 = PES(facility_number, type_code)
@@ -17,6 +17,6 @@ print(s1.site_info())
 print(s1.limit_info())
 print(s1.qd_info())
 
-# Try to interate over the attributes:
-for attribute, value in s1.__dict__.items():
-    print(attribute, value) # TODO Figure out why the bd1_1_1 is still zero after entering a value.
+# print all the attributes:
+# for attribute, value in s1.__dict__.items():
+    # print(attribute, value) 
