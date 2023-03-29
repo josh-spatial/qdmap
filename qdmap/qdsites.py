@@ -41,12 +41,15 @@ class PES(Site):
     @property
     def bd1_1_1(self):
         """Returns BD1 blast distance from a given net explosives quantity (NEQ) in kg."""
-        # import numpy as np
-        # bd1 = np.where(q < 30_000, 0.35 * q ** (1/3), 0.44 * q ** (1/3))
-        # return bd1
-
-        # Use the qdcalc bd1 function instead of defining function inside the class
+        # Use the qdcalc bd1 function
         return qd.bd1(self.neq_1_1)
+
+
+    @property
+    def bd1_1_1_array(self):
+        """Returns BD1 blast distance as an array from a given net explosives quantity (NEQ) in kg."""
+        # Use the qdcalc bd1 function
+        return qd.bd1_array(self.neq_1_1)
 
     def qd_info(self):
         """Return formatted info about the QDs."""
