@@ -1,6 +1,5 @@
-# %% [markdown]
 # # Geoprocessing with GeoPanda vice PyQGIS
-# 
+#
 # 1. Import the raw potential explosion site (PES) layer data.
 # 2. Read the PES data into a GeoDataframe.
 # 3. Calculate the QDs and add them as new columns in the GeoDataframe.
@@ -25,6 +24,12 @@ import pandas as pd
 import geopandas as gpd
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
+# import QD calc (make sure qdcalc in in your path)
+sys.path.append("/Users/josh/github/qdmap/qdmap/")
+# Import the file with all of the QD functions already defined.
+import qdcalc as qd
+
 
 data_folder = 'data'
 output_folder = 'output'
@@ -34,6 +39,7 @@ if not os.path.exists(data_folder):
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
+# TODO automate the export of a selected layer to a .gpkg file called 'pes_initial_data'
 input_file = 'pes_initial_data.gpkg'
 input_path = os.path.join(data_folder, input_file)
 pes_gdf = gpd.read_file(input_path)
@@ -55,37 +61,16 @@ ax.get_xaxis().set_visible(False)
 ax.get_yaxis().set_visible(False)
 plt.show()
 
-# %% [markdown]
 # Check the CRS of the GDF. (Make sure we are in a projected CRS so that we can perform the buffer operation, otherwise we need to reproject into one first.)
-
-# %%
 pes_gdf.crs
 
-# %% [markdown]
-# ## Geodataframe analysis
-
-# %%
-# import QD calc (make sure qdcalc in in your path)
-import sys
-sys.path.append("/Users/josh/github/qdmap/qdmap/")
-
-
-# %%
-# Import the file with all of the QD functions already defined.
-import qdcalc as qd
-
-# %%
+# Geodataframe analysis
 # Apply the BD1 QD function to the net explosive quantity (NEQ) of HD 1.1 field/column.
 pes_gdf['hd_1_1_bd_1'] = pes_gdf.neq_1_1.apply(qd.bd1)
 # Round the column down to 2 decimal places.
 pes_gdf = pes_gdf.round({'hd_1_1_bd_1': 2})
 
-
-# %%
-pes_gdf.head()
-
-# %%
-# add the other functions.
+# Add the other functions.
 pes_gdf['hd_1_1_bd_2'] = pes_gdf.neq_1_1.apply(qd.bd2)
 pes_gdf['hd_1_1_bd_3'] = pes_gdf.neq_1_1.apply(qd.bd3)
 
@@ -152,7 +137,7 @@ qd_buffer_dict = dict(zip(buffer_geometries, qd_function_key_list))
 # print(qd_buffer_dict)
 
 # %%
-# I need more than just the geometry. 
+# I need more than just the geometry.
 # To select multiple columns, use a list of column names within the selection brackets [].
 
 for buffer_geometry in buffer_geometries:
