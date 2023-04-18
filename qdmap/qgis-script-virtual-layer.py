@@ -20,3 +20,15 @@ def bd1(q, feature, parent):
 field = QgsField('blast_dist_1_hd_1_1', QVariant.Double, "double", 12, 2)
 layer = iface.activeLayer() # get the active layer
 layer.addExpressionField('bd1("neq_1_1")', field)
+
+# Adding a buffer layer based on a QD.
+processing.runAndLoadResults("native:buffer", {
+		# update the INPUT based on my new Google Drive folder.
+    'INPUT':'/Users/josh/My Drive (wustner@gmail.com)/programming/qgis/pes_g.gpkg|layername=pes_g',
+    'DISTANCE':QgsProperty.fromExpression('"blast_dist_1_hd_1_1"'),
+    'SEGMENTS':40,
+    'END_CAP_STYLE':0,
+    'JOIN_STYLE':0,
+    'MITER_LIMIT':2,
+    'DISSOLVE':False,
+    'OUTPUT':'TEMPORARY_OUTPUT'})
