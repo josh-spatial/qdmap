@@ -41,7 +41,7 @@ if not os.path.exists(output_folder):
 
 # TODO automate the export of a selected layer to a .gpkg file called 'pes_initial_data'
 input_file = 'pes_initial_data.gpkg'
-input_path = os.path.join(data_folder, input_file)
+inut_path = os.path.join(data_folder, input_file)
 pes_gdf = gpd.read_file(input_path)
 
 # Visualize the layer
@@ -84,7 +84,8 @@ pes_gdf.head()
 # for function in functions:
 #     pes_gdf["hd_1_1" + str(function)] = pes_gdf.neq_1_1.apply(function)
 
-# create buffer geometry GeoSeries based on newly computed QDs
+# Create buffer geometry GeoSeries based on newly computed QDs.
+# First, we create the a dictionary of QD functions matched to the columns of the geodataframes.
 qd_functions = {
     'hd_1_1_bd_1': pes_gdf.hd_1_1_bd_1,
     'hd_1_1_bd_2': pes_gdf.hd_1_1_bd_2,
