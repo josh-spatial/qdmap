@@ -94,7 +94,7 @@ def bd8(q):
     return bd
 
 #bd9 function
-def BD9(q):
+def bd9(q):
     """Returns bd9 blast distance from a given
       quantity (Q) in kg."""
     # import numpy as np
