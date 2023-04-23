@@ -1,13 +1,13 @@
 """Main module."""
 
-from qdsites import PES
-import qdcalc as qd
 import matplotlib.pyplot as plt
 import numpy as np
 
+import qdcalc as qd
+from qdsites import PES
 
-# TODO write a while loop for input
-# TODO add facilities to a list (?)
+# TODO: write a while loop for input
+# TODO: add facilities to a list (?)
 
 facility_number = input('Enter the facility number: ')
 type_code = input("Enter the facility's type code: ")
@@ -27,7 +27,7 @@ X = np.linspace(0, s1.neq_1_1, 100)
 Y = qd.bd1_array(X)
 
 fig, ax = plt.subplots()
-ax.plot(X, Y, color='green') 
+ax.plot(X, Y, color='green')
 # fig.savefig("figure.pdf")
 # provide plotting parameters
 plt.title("QD vs. NEW")
@@ -41,4 +41,4 @@ fig.show()
 
 # print all the attributes:
 # for attribute, value in s1.__dict__.items():
-    # print(attribute, value) 
+    # print(attribute, value)
