@@ -2,8 +2,6 @@
 
 import numpy as np
 
-# TODO add the rest of the functions
-
 # Define blast distance (BD) functions.
 def bd1(q):
     """Returns BD1 blast distance from a given quantity (Q) in kg."""
@@ -321,7 +319,7 @@ def bd35(q):
     return bd
 
 def bd36(q):
-    """Returns BD34 blast distance from a given quantity (Q) in kg."""
+    """Returns BD36 blast distance from a given quantity (Q) in kg."""
     if q < 2_500:
         bd = 3 * q ** (2/3)
     elif q < 4_500:
@@ -329,3 +327,9 @@ def bd36(q):
     else:
         bd = 44.4 * q ** (1/3)
     return bd
+
+# TODO: Add the debris and fragment distance functions.
+# TODO: Add the progressive effects distance functions.
+# TODO: Add the thermal distance functions.
+#
+#
