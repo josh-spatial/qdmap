@@ -4,7 +4,7 @@
 # Maybe I can make a child class of Site for PESite. In that class is where I bring in the Limit class
 # or just leave it as attributes within the PESite class? I think I'm making this too complicated.
 
-import qdcalc as qd
+import qdmap.qdcalc as qd
 
 
 class Site:
@@ -18,7 +18,7 @@ class Site:
         """Return formatted info about the site."""
         site_info = f"Facility No.: {self.facility_no}\n\tType: {self.kind}"
         return site_info
-    
+
 class PES(Site):
     """Represents aspects of a site, specific to potential explosion sites."""
     def __init__(self, facility_no, kind):    # Initialize attributes of parent class.

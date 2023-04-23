@@ -3,8 +3,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-import qdcalc as qd
-from qdsites import PES
+import qdmap.qdcalc as qd
+from qdmap.qdsites import PES
 
 # TODO: write a while loop for input
 # TODO: add facilities to a list (?)
