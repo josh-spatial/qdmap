@@ -13,8 +13,8 @@
 ## Features
 
 - **IN-PROGRESS** Create a basic quantity-distance calculator
-    - **IN-PROGRESS** Finish adding all Blast Distance equations to qdcalc.py
-    - **IN-PROGRESS** Finish adding all Blast Distance equations to qdcalc.py
+    - **DONE** Finish adding all AASTP-1 Blast Distance equations to qdcalc.py
+    - **TODO** Finish adding all Debris and Fragment, Progressive, and Thermal Distance equations to qdcalc.py
 - **IN-PROGRESS** Write spatial analysis (GeoPandas)
 
 - TODO Create QGIS Plugin
